@@ -66,7 +66,7 @@ export function Footer() {
             target={'_blank'}
             rel="noopener noreferrer"
           >
-            <Icons name="instagram" size={15} />
+            <Icons name="instagram" size={25} />
           </Link>
           <Link
             href={linksFooter.whatsapp}
@@ -75,7 +75,7 @@ export function Footer() {
             target={'_blank'}
             rel="noopener noreferrer"
           >
-            <Icons name="whatsapp" size={15} />
+            <Icons name="whatsapp" size={25} />
           </Link>
           <Link
             href={linksFooter.correo}
@@ -84,7 +84,7 @@ export function Footer() {
             target={'_blank'}
             rel="noopener noreferrer"
           >
-            <Icons name="mail" size={15} />
+            <Icons name="mail" size={25} />
           </Link>
         </div>
       </div>
