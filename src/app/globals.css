@@ -1,26 +1,113 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  /* Cremas y papel */
+  --color-cream:         #F5EFE3;
+  --color-cream-warm:    #FAF4E7;
+  --color-cream-deep:    #ECE2CC;
+  --color-paper:         #FFFAEE;
+
+  /* Lavanda */
+  --color-lavender-soft: #E7DDF4;
+  --color-lavender-mid:  #A88BD4;
+  --color-lavender-deep: #6747B0;
+  --color-lavender-ink:  #3A2370;
+
+  /* Verde salvia */
+  --color-sage:          #9BB098;
+  --color-sage-deep:     #5E7A5C;
+  --color-sage-soft:     #D9E2D5;
+
+  /* Terciario */
+  --color-gold:          #C5A878;
+
+  /* Tinta */
+  --color-ink:           #2A1F44;
+  --color-ink-soft:      #6B5F85;
+  --color-thread:        #B9A0DC;
+
+  /* Tipografía */
+  --font-sans:  'Nunito', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --hairline: rgba(58, 35, 112, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ── Botones globales ── */
+.btn-primary {
+  background: var(--color-lavender-deep);
+  color: var(--color-cream-warm);
+  padding: 16px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover {
+  background: var(--color-lavender-ink);
+}
+
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-cream-warm);
+  color: var(--color-lavender-deep);
+  border: 1.5px dashed var(--color-lavender-deep);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-cream-warm);
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition:
+          border-color 0.15s,
+          background 0.15s;
+}
+.btn-ghost:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }

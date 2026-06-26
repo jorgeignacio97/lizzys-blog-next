@@ -1,0 +1,280 @@
+.hero {
+    position: relative;
+    padding: 56px 56px 120px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    align-items: end;
+    background:
+            radial-gradient(ellipse 1200px 800px at 50% -10%, var(--color-lavender-soft) 0%, transparent 60%),
+            linear-gradient(180deg, var(--color-cream-warm) 0%, var(--color-cream) 100%);
+}
+
+/* ── Columna izquierda ── */
+.left {
+    position: relative;
+    padding-top: 24px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px 8px 8px;
+    background: var(--color-paper);
+    border: 1.5px dashed var(--color-lavender-deep);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-lavender-deep);
+    margin-bottom: 36px;
+}
+
+.eyebrowDot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-sage);
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 116px;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--color-ink);
+    margin: 0 0 32px;
+}
+
+.titleLine {
+    display: block;
+}
+
+.titleLineIndented {
+    display: block;
+    padding-left: 64px;
+}
+
+.titleEmphasis {
+    font-style: italic;
+    color: var(--color-lavender-deep);
+    position: relative;
+    display: inline-block;
+}
+.titleEmphasis svg {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    color: var(--color-lavender-deep);
+    opacity: 0.5;
+}
+
+.punct {
+    color: var(--color-sage);
+}
+
+.lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--color-ink-soft);
+    max-width: 480px;
+    margin: 0 0 32px;
+}
+
+.ctaRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ctaLabel {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--color-sage-deep);
+    margin-left: 8px;
+}
+
+/* ── Columna derecha — tarjetas ── */
+.right {
+    position: relative;
+    height: 560px;
+}
+
+.string {
+    position: absolute;
+    pointer-events: none;
+    color: var(--color-lavender-mid);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* Base de etiqueta tipo packing-slip */
+.tag {
+    position: absolute;
+    background: var(--color-paper);
+    padding: 26px;
+    box-shadow:
+            0 1px 0 var(--color-cream-deep) inset,
+            0 1px 2px rgba(60, 40, 100, 0.06),
+            0 18px 40px rgba(60, 40, 100, 0.1);
+    border-radius: 4px;
+}
+.tag::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1.5px dashed var(--hairline);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* Etiqueta A — bordado */
+.tagA {
+    top: 0;
+    right: 0;
+    width: 320px;
+    transform: rotate(3deg);
+}
+
+.tagAHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--hairline);
+}
+
+.tagALabel {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-sage-deep);
+}
+
+.tagANum {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--color-lavender-deep);
+}
+
+.tagATitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--color-ink);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
+}
+
+.tagADesc {
+    font-size: 13.5px;
+    color: var(--color-ink-soft);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.tagASwatch {
+    height: 90px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--color-lavender-soft) 0%, var(--color-lavender-mid) 100%);
+    display: grid;
+    place-items: center;
+    color: var(--color-paper);
+    margin-bottom: 14px;
+}
+
+.tagAFoot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--color-ink-soft);
+}
+.tagAFoot strong {
+    color: var(--color-lavender-deep);
+    font-weight: 700;
+}
+
+/* Etiqueta B — pintura */
+.tagB {
+    top: 200px;
+    left: 20px;
+    width: 260px;
+    transform: rotate(-4deg);
+    background: var(--color-lavender-soft);
+}
+
+.tagBSwatch {
+    height: 130px;
+    border-radius: 3px;
+    background: var(--color-paper);
+    display: grid;
+    place-items: center;
+    color: var(--color-sage-deep);
+    margin-bottom: 14px;
+}
+
+.tagBMeta {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-lavender-ink);
+    margin-bottom: 4px;
+}
+
+.tagBTitle {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--color-ink);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+}
+
+/* Etiqueta C — rediseño */
+.tagC {
+    bottom: 0;
+    right: 60px;
+    width: 220px;
+    transform: rotate(2deg);
+    background: var(--color-sage-soft);
+}
+
+.tagCSwatch {
+    height: 100px;
+    border-radius: 3px;
+    background: var(--color-paper);
+    display: grid;
+    place-items: center;
+    color: var(--color-sage-deep);
+    margin-bottom: 12px;
+}
+
+.tagCLabel {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-sage-deep);
+    margin-bottom: 6px;
+}
+
+.tagCTitle {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-ink);
+    line-height: 1.15;
+}

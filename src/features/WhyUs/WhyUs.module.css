@@ -1,0 +1,150 @@
+.section {
+    padding: 96px 56px;
+    background: var(--color-paper);
+    position: relative;
+    overflow: hidden;
+}
+.section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top: 1.5px dashed var(--hairline);
+}
+.section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1.5px dashed var(--hairline);
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.kicker {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--color-sage-deep);
+    margin-bottom: 12px;
+}
+
+.headTitle {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 56px;
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
+    margin: 0 0 12px;
+    line-height: 1;
+}
+.headTitle em {
+    font-style: italic;
+    color: var(--color-lavender-deep);
+}
+
+.headLead {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--color-sage-deep);
+}
+
+/* Grid con hilo conector */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.grid::before {
+    content: '';
+    position: absolute;
+    top: 48px;
+    left: 12%;
+    right: 12%;
+    border-top: 1.5px dashed var(--color-lavender-mid);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.item {
+    position: relative;
+    text-align: center;
+    padding: 0 16px;
+}
+
+/* Badge circular con doble borde */
+.badge {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--color-lavender-soft);
+    border: 1.5px dashed var(--color-lavender-deep);
+    color: var(--color-lavender-deep);
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 1;
+}
+.badge::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--color-lavender-deep);
+    border-radius: 50%;
+    opacity: 0.25;
+}
+
+.badgeSage {
+    background: var(--color-sage-soft);
+    color: var(--color-sage-deep);
+    border-color: var(--color-sage-deep);
+}
+.badgeSage::after {
+    border-color: var(--color-sage-deep);
+}
+
+.badgeGold {
+    background: #F0E5D2;
+    color: #8B6F3E;
+    border-color: #8B6F3E;
+}
+.badgeGold::after {
+    border-color: #8B6F3E;
+}
+
+.num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--color-lavender-deep);
+    margin-bottom: 8px;
+}
+
+.itemTitle {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+    margin: 0 0 14px;
+    line-height: 1.2;
+}
+
+.itemDesc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+    margin: 0 auto;
+    max-width: 280px;
+}
